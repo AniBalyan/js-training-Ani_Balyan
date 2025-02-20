@@ -1,1 +1,1 @@
-console.log("Hello, JavaScript Training!");
+console.log("Hello, JavaScript Training");
