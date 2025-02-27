@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/AniBalyan/js-training-Ani_Balyan/issues"
   },
-  "homepage": "https://github.com/AniBalyan/js-training-Ani_Balyan#readme"
+  "homepage": "https://github.com/AniBalyan/js-training-Ani_Balyan#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
