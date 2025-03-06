@@ -83,7 +83,7 @@ else if (myInput === "Incorrect") {
     score--;
 }
 else {
-    "Please enter Correct or Incorrect"
+    "Please enter Correct or Incorrect" // you are missing console.log here
 };
 if (score === 0) {
     console.log ("Game over")
