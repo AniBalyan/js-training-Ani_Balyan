@@ -17,7 +17,7 @@
 // 10. If the user enters an invalid operator, show an error message.
 // Write your code here:
 
-const {userInput} = require("./UserInput"); 
+const {userInput} = require("../UserInput"); 
 const firstNumber = Number(userInput("Please enter first number "));
 const operator = userInput("Please enter operator ");
 const secondNumber = Number(userInput("Please enter second number "));
