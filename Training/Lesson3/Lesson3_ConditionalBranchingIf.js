@@ -3,7 +3,7 @@
 // Write a program that takes a number as input and checks if it is positive, negative, or zero.
 // Write your code here
 
-const {userInput} = require("./UserInput"); 
+const {userInput} = require("../../UserInput"); 
 const myInput = userInput("Please enter your input ");
 console.log(myInput);
 

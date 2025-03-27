@@ -23,7 +23,7 @@ while (num >=1) {
 // Write your code here
 
 
- const {userInput} = require("./UserInput"); 
+ const {userInput} = require("../UserInput"); 
 let enteredNumber;
 
 do {
