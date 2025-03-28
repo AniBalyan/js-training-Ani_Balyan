@@ -15,6 +15,8 @@ function square(n) {
 }
 
   calculateSquare(5, square)
+// Your function calculateSquare is not passing the squared value to the callback function. 
+// Instead, it is passing n directly, which means the square function is receiving n instead of n * n.
 
 // Task 2: Login Status (Simple Callback)
 // Requirements:
@@ -40,6 +42,25 @@ function checkCredentials(userName, password) {
 
 login("Ani", "123456", checkCredentials)
 
+// The login function should not pass both userName and password to the callback. 
+// Instead, it should determine the result first and then pass only the message to the callback.
+//correct implementation would be
+function login(userName, password, callback) {
+    if (userName === "Ani" && password === "123456") {
+        callback("You are logged in!");
+    } else {
+        callback("Wrong username or Password");
+    }
+}
+
+function displayMessage(message) {
+    console.log(message);
+}
+
+login("Ani", "123456", displayMessage);
+
+
+
 // Task 3: Sum of Numbers (Using for Loop and Callback)
 // Requirements:
 // Write a function sumNumbersUpTo(n, callback) that takes a number n
@@ -57,7 +78,24 @@ function result(n) {
       sum = sum +i
     }
     console.log(sum)
-
 }
 
 sumNumbersUpTo(4, result)
+// The sumNumbersUpTo function should calculate the sum of numbers from 1 to n and then pass the result to the callback.
+// However, currently, it is just passing n to the callback, which is not correct.
+// Correct implementaiton wold be
+function sumNumbersUpTo(n, callback) {
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        sum += i;
+    }
+    callback(sum);
+}
+
+function result(sum) {
+    console.log(sum);
+}
+
+sumNumbersUpTo(4, result);
+
+
