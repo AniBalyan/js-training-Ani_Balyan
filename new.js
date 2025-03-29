@@ -1,14 +1,16 @@
-function greet(myFunc, alsoFunc) {
-    
-    myFunc();    
-    alsoFunc();  
-}
+function greet(name, myFunc, alsoFunc) {
+    console.log("Hello, " + name);
+    myFunc();
+    alsoFunc(); // Calling the callback function
+  }
+  
+  function sayGoodbye() {
+    console.log("Goodbye!");
+  }
+  
 
-greet(
-    function () {
-        console.log("Goodbye!");
-    }, 
-    function () {
-        console.log("OK");
-    }
-);
+  function sayOk(){
+    console.log("OK")
+  }
+
+  greet("Alice", sayGoodbye, sayOk);

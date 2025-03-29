@@ -5,12 +5,10 @@
 // Write your code here
 
 function calculateSquare(n, callback) {
-    callback(n);
-    
-}
+    callback(n*n);
+    }
 
-function square(n) {
-    let result = n * n;
+function square(result) {
     console.log(result)
 }
 
@@ -23,22 +21,19 @@ function square(n) {
 // whether the user is logged in or if the credentials are wrong.
 // Write your code here
 
-function login (userName, password, callback) {
-    callback(userName, password);
-}
-
-function checkCredentials(userName, password) {
-    if (userName == "Ani" && password == "123456") {
-        console.log("You are logged in!")
-    }
-
-    else {
-        console.log("Wrong username or Password")
-        
+function login(userName, password, callback) {
+    if (userName === "Ani" && password === "123456") {
+        callback("You are logged in!");
+    } else {
+        callback("Wrong username or Password");
     }
 }
 
-login("Ani", "123456", checkCredentials)
+function displayMessage(message) {
+    console.log(message);
+}
+
+login("Ani", "123456", displayMessage);
 
 // Task 3: Sum of Numbers (Using for Loop and Callback)
 // Requirements:
@@ -48,16 +43,15 @@ login("Ani", "123456", checkCredentials)
 // Write your code here
 
 function sumNumbersUpTo(n, callback) {
-    callback(n);
-}
-
-function result(n) {
-      let sum =0
-      for (let i = 1; i<=n; i++) {
-      sum = sum +i
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        sum += i;
     }
-    console.log(sum)
-
+    callback(sum);
 }
 
-sumNumbersUpTo(4, result)
+function result(sum) {
+    console.log(sum);
+}
+
+sumNumbersUpTo(2, result);
