@@ -44,6 +44,18 @@ console.log(getSecondElement(['a', 'b', 'c']))
 // Stop once the first element greater than 10 is found.
 // Write you code here
 
+// The logic is incorrect because arr.indexOf(arr[i]) > 10 checks the index, not the value.
+// And your array is a list of strings, so comparing strings to 10 makes no sense here.
+let getFirstGreaterThanTen = function(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 10) {
+            return arr[i];
+        }
+    }
+    return undefined;
+}
+
+
 let getFirstGreaterThanTen = function(arr) {
     for (let i =0; i< arr.length; i++) {
         if(arr.indexOf(arr[i]) > 10)
