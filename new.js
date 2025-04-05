@@ -14,3 +14,6 @@ function greet(name, myFunc, alsoFunc) {
   }
 
   greet("Alice", sayGoodbye, sayOk);
+
+
+  
