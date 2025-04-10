@@ -56,11 +56,5 @@ let getFirstGreaterThanTen = function(arr) {
 }
 
 
-let getFirstGreaterThanTen = function(arr) {
-    for (let i =0; i< arr.length; i++) {
-        if(arr.indexOf(arr[i]) > 10)
-            return arr[i]
-    }
-}
 
-console.log(getFirstGreaterThanTen(['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve']))
+console.log(getFirstGreaterThanTen([3, 8, 11, 5, 12, 7]))
