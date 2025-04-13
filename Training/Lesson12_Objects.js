@@ -99,9 +99,9 @@ function createUser(name, age, isAdmin) {
   // Requirements:
   // - Do not modify the original objects.
   
-  function mergeObjects() {
+  function mergeObjects(obj1, obj2) {
     
-    let obj1 = {
+    let fruits1 = {
         fruit1: 'Orange',
         fruit2: 'Lime',
         fruit3: 'Lemon',
@@ -109,7 +109,7 @@ function createUser(name, age, isAdmin) {
     }
    
 
-    let obj2 = {
+    let fruits2 = {
         fruit3: 'Strawberry',
         fruit4: 'Blueberry',
         fruit5: 'Blackberry'
@@ -117,7 +117,7 @@ function createUser(name, age, isAdmin) {
     
 
 
-    let obj3 = Object.assign({}, obj1, obj2)
+    let obj3 = Object.assign({}, fruits1, fruits2)
 
     return obj3
   
@@ -125,4 +125,4 @@ function createUser(name, age, isAdmin) {
   }
 
   
-  console.log(mergeObjects())
+  console.log(mergeObjects(fruits1, fruits2))
