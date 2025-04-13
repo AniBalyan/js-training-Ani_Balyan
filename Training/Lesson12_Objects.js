@@ -80,8 +80,14 @@ function createUser(name, age, isAdmin) {
   
   function getStringKeys(obj) {
    let arr = new Array();
-   arr.push(...Object.keys(obj)) 
-     return arr
+   
+   for (let key in obj) {
+    if (typeof obj[key] === 'string') {
+    arr.push(key)
+    }
+}
+     
+   return arr;
   }
 
   console.log(getStringKeys({userName: "John", age: 30}))
@@ -93,6 +99,30 @@ function createUser(name, age, isAdmin) {
   // Requirements:
   // - Do not modify the original objects.
   
-  function mergeObjects(obj1, obj2) {
-    // your code here
+  function mergeObjects() {
+    
+    let obj1 = {
+        fruit1: 'Orange',
+        fruit2: 'Lime',
+        fruit3: 'Lemon',
+        
+    }
+   
+
+    let obj2 = {
+        fruit3: 'Strawberry',
+        fruit4: 'Blueberry',
+        fruit5: 'Blackberry'
+    }
+    
+
+
+    let obj3 = Object.assign({}, obj1, obj2)
+
+    return obj3
+  
+
   }
+
+  
+  console.log(mergeObjects())
