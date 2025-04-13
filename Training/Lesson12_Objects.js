@@ -57,7 +57,19 @@ function createUser(name, age, isAdmin) {
   
   function arrayToObject(arr) {
 
-    let obj = {};
+    let obj = {};let fruits1 = {
+        fruit1: 'Orange',
+        fruit2: 'Lime',
+        fruit3: 'Lemon',
+        
+    }
+   
+
+    let fruits2 = {
+        fruit3: 'Strawberry',
+        fruit4: 'Blueberry',
+        fruit5: 'Blackberry'
+    }
 
     for(let i =0; i < arr.length; i++){
         obj[i] = arr[i]
@@ -101,28 +113,25 @@ function createUser(name, age, isAdmin) {
   
   function mergeObjects(obj1, obj2) {
     
-    let fruits1 = {
-        fruit1: 'Orange',
-        fruit2: 'Lime',
-        fruit3: 'Lemon',
-        
-    }
-   
-
-    let fruits2 = {
-        fruit3: 'Strawberry',
-        fruit4: 'Blueberry',
-        fruit5: 'Blackberry'
-    }
-    
-
-
     let obj3 = Object.assign({}, fruits1, fruits2)
 
     return obj3
   
 
   }
+  let fruits1 = {
+    fruit1: 'Orange',
+    fruit2: 'Lime',
+    fruit3: 'Lemon',
+    
+}
+
+
+let fruits2 = {
+    fruit3: 'Strawberry',
+    fruit4: 'Blueberry',
+    fruit5: 'Blackberry'
+}
 
   
   console.log(mergeObjects(fruits1, fruits2))
