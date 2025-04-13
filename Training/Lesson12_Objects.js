@@ -113,11 +113,10 @@ function createUser(name, age, isAdmin) {
   
   function mergeObjects(obj1, obj2) {
     
-    let obj3 = Object.assign({}, fruits1, fruits2)
+    let obj3 = Object.assign({}, obj1, obj2)
 
     return obj3
   
-
   }
   let fruits1 = {
     fruit1: 'Orange',
