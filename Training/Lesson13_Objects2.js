@@ -18,8 +18,16 @@ let shoppingCart = {
       this.cart.push(item);
     },
     removeItem(item) {
-   this.cart.shift(item)
+   this.cart.shift(item) // shift() removes the first item based on the requirements you should remove the first occurrence of an item from the `cart`.
     },
+    //correct code is:
+removeItem(item) {
+  const index = this.cart.indexOf(item);
+  if (index !== -1) {
+    this.cart.splice(index, 1);
+  }
+}
+
     clearCart() {
       this.cart.length = 0;
     },
