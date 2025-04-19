@@ -108,12 +108,7 @@ Write your code here: */
 let withDuplicates = new Array();
 let withoutDuplicates = new Array();
 
-function removeDuplicates(...arr) {  // Should accept an array of numbers. But the current function accepts spread (...arr) which flattens arguments, not a single array.
-// removeDuplicates([11, 11, 2])
-// Will not work as expected, because:
-// function removeDuplicates(...arr)
-// Turns arr into [[11, 11, 2]] (a single element array of an array) — this causes it to break if passed as an array.
-
+function removeDuplicates(...arr) {
 
 for (let inputtedNumbers of arr) {
     withDuplicates.push(inputtedNumbers)
@@ -131,6 +126,6 @@ for (let number of withDuplicates) {
 }
 
 
-console.log("Without duplicates: " + (removeDuplicates(4, 4, 2, 3, 4, 6, 4)))
+console.log("Without duplicates: " + (removeDuplicates([4, 4, 2, 3, 4, 6, 4]))) 
 
 
