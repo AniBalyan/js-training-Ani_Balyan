@@ -1,17 +1,13 @@
-
-
-let user = { name: "John" };
-let admin = { name: "Admin" };
-
-function sayHi() {
-  console.log(this.name );
+function makeClass(phrase) {
+ 
+  return class {
+    sayHi() {
+      console.log(phrase);
+    }
+  };
 }
 
-user.f = sayHi;
-admin.f = sayHi;
 
-user.f(); // John  (this == user)
-admin.f(); // Admin  (this == admin)
+let User = makeClass("Hello");
 
-admin['f']();
-
+//new User().sayHi(); 
